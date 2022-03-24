@@ -10,12 +10,25 @@ export class MainPageComponent implements OnInit {
   phrase: string ="Welcome";
   name: string ='Veeramani';
   location: string ="Chennai";
+  enableLogout  = false;
+  role = "Developer";
+  firstName = "";
 
   getLocation(){
     return this.location;
   }
 
-  constructor() { }
+  constructor() { 
+    setTimeout(() => {
+      return this.enableLogout = true;
+    },2000)
+  }
+  roleChanged(){
+    return this.role = "Technical Lead";
+  }
+  getFirstName(event:Event){
+    this.firstName = (<HTMLInputElement>event.target).value;
+  }
 
   ngOnInit(): void {
   }

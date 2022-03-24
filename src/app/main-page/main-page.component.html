@@ -1,1 +1,13 @@
-<p>{{phrase}} {{name}} from {{getLocation()}}</p>
+<h2>String InterPolation :</h2>
+<p> {{phrase}} {{name}} from {{getLocation()}}</p>
+<h2>Property Binding</h2>
+<button class = "btn btn-primary" [disabled] = "!enableLogout"> Logout</button>
+<p [innerText]="enableLogout"></p>
+<h2>Event Binding</h2>
+<button class = "btn btn-primary" (click) = "roleChanged()"> Current Role </button>
+<p>{{role}}</p>
+<h2>Data with Event binding</h2>
+<label>First Name</label>
+<input class = "form-control"
+(input) = "getFirstName($event)">
+<p>{{firstName}}</p>
